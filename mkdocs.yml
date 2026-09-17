@@ -1,0 +1,65 @@
+site_name: Àmbit científic i tecnològic · 3r PDC
+site_description: Activitats de l’Àmbit científic i tecnològic de 3r PDC
+site_url: https://saloma-ui.github.io/3pdc/
+repo_url: https://github.com/saloma-ui/3pdc
+repo_name: saloma-ui/3pdc
+
+theme:
+  name: material
+  language: ca
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+plugins:
+  - search
+  - exporter:
+      buttons:
+        - title: Baixa el PDF
+          icon: material-file-download-outline
+          enabled: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.enabled
+          attributes: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.attributes
+      formats:
+        pdf:
+          explicit: true
+          concurrency: 1
+          stylesheets:
+            - pdf.scss
+          scripts:
+            - pdf_mathjax.js
+          browser:
+            timeout: 120000
+
+nav:
+  - Inici: index.md
+  - Informació del curs:
+      - Programació: programacio.md
+      - Criteris d'avaluació: criteris-avaluacio.md
+      - Calendari: calendari.md
+  - Activitats:
+      - UP1: activitats/up1/index.md
+      - UP2: activitats/up2/index.md
+      - UP3: activitats/up3/index.md
+      - UP4: activitats/up4/index.md
+      - UP5: activitats/up5/index.md
+      - UP6: activitats/up6/index.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - presentacio.css
+
+extra_javascript:
+  - interaccio.js
+  - mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

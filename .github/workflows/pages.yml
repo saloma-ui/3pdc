@@ -1,0 +1,74 @@
+name: Publica 3r PDC
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obté el repositori
+        uses: actions/checkout@v7
+
+      - name: Configura Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instal·la dependències
+        run: pip install -r requirements.txt
+
+      - name: Instal·la Chromium per als PDF
+        run: python -m playwright install --with-deps chromium
+
+      - name: Configura GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Construeix el lloc
+        run: mkdocs build --strict
+
+      - name: Comprova els PDF generats
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from pypdf import PdfReader
+
+          pdfs = sorted(Path('site').rglob('*.pdf'))
+          if not pdfs:
+              print('Encara no hi ha cap pàgina configurada per generar PDF.')
+
+          for path in pdfs:
+              pages = len(PdfReader(path).pages)
+              print(f'{path}: {pages} pàgines')
+          PY
+
+      - name: Prepara els fitxers per publicar
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site/
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Publica a GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
