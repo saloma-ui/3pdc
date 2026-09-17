@@ -39,7 +39,10 @@ nav:
       - Criteris d'avaluació: criteris-avaluacio.md
       - Calendari: calendari.md
   - Activitats:
-      - UP1: activitats/up1/index.md
+      - UP1:
+          - Índex: activitats/up1/index.md
+          - A01 · De què està fet el nostre cos?: activitats/up1/a01_up01/index.md
+          - A02 · Què sabem de les cèl·lules?: activitats/up1/a02_up01/index.md
       - UP2: activitats/up2/index.md
       - UP3: activitats/up3/index.md
       - UP4: activitats/up4/index.md

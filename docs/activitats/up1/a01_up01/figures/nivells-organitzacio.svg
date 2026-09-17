@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-labelledby="titol descripcio">
+  <title id="titol">Del cos humà a una cèl·lula muscular</title>
+  <desc id="descripcio">Seqüència de cinc ampliacions: persona, braç, múscul, teixit muscular i cèl·lula muscular.</desc>
+
+  <defs>
+    <linearGradient id="fons" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6fbfa"/>
+      <stop offset="1" stop-color="#eef3fb"/>
+    </linearGradient>
+    <linearGradient id="pell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f1bd98"/>
+      <stop offset="1" stop-color="#d9916f"/>
+    </linearGradient>
+    <linearGradient id="muscul" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ee7773"/>
+      <stop offset="0.55" stop-color="#cf4f5e"/>
+      <stop offset="1" stop-color="#a93249"/>
+    </linearGradient>
+    <linearGradient id="fibra" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e96c70"/>
+      <stop offset="0.5" stop-color="#c94257"/>
+      <stop offset="1" stop-color="#e96c70"/>
+    </linearGradient>
+    <filter id="ombra" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9" result="blur"/>
+      <feOffset in="blur" dy="8" result="offset"/>
+      <feColorMatrix in="offset" type="matrix" values="0 0 0 0 0.17  0 0 0 0 0.29  0 0 0 0 0.34  0 0 0 .16 0" result="ombra-color"/>
+      <feMerge><feMergeNode in="ombra-color"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ombra-suau" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feOffset in="blur" dy="3" result="offset"/>
+      <feColorMatrix in="offset" type="matrix" values="0 0 0 0 0.14  0 0 0 0 0.24  0 0 0 0 0.29  0 0 0 .18 0" result="ombra-color"/>
+      <feMerge><feMergeNode in="ombra-color"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="paper" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="4" r="1.2" fill="#325f67" opacity="0.045"/>
+      <circle cx="18" cy="16" r="0.8" fill="#325f67" opacity="0.035"/>
+    </pattern>
+    <pattern id="estries" width="22" height="16" patternUnits="userSpaceOnUse">
+      <rect width="22" height="16" fill="none"/>
+      <rect x="2" width="4" height="16" fill="#842f48" opacity="0.28"/>
+      <rect x="12" width="3" height="16" fill="#fff4ed" opacity="0.22"/>
+    </pattern>
+    <clipPath id="clip-teixit">
+      <circle cx="1115" cy="320" r="105"/>
+    </clipPath>
+    <clipPath id="clip-cellula">
+      <circle cx="1430" cy="320" r="105"/>
+    </clipPath>
+    <marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#287681"/>
+    </marker>
+    <style>
+      .titol { font: 700 38px/1.2 Inter, Arial, sans-serif; fill: #163c47; }
+      .subtitol { font: 400 20px/1.35 Inter, Arial, sans-serif; fill: #4b6670; }
+      .nom { font: 700 25px/1.15 Inter, Arial, sans-serif; fill: #173f49; letter-spacing: .3px; }
+      .nivell { font: 500 18px/1.2 Inter, Arial, sans-serif; fill: #5a7077; }
+      .numero { font: 800 19px Inter, Arial, sans-serif; fill: white; text-anchor: middle; dominant-baseline: middle; }
+      .zoom { font: 700 17px Inter, Arial, sans-serif; fill: #287681; letter-spacing: .8px; }
+      .targeta { fill: #ffffff; stroke: #d5e3e6; stroke-width: 2; }
+      .marc { fill: #f9fcfc; stroke: #b8d4d8; stroke-width: 4; }
+      .element { cursor: pointer; transform-box: fill-box; transform-origin: center; transition: transform .18s ease, opacity .18s ease; }
+      .element:hover, .element:focus { transform: translateY(-5px); }
+      .element:focus { outline: none; }
+      @media (prefers-reduced-motion: reduce) { .element { transition: none; } }
+    </style>
+  </defs>
+
+  <rect width="1600" height="700" fill="url(#fons)"/>
+  <rect width="1600" height="700" fill="url(#paper)"/>
+
+  <text x="800" y="58" class="titol" text-anchor="middle">Del cos humà a una cèl·lula muscular</text>
+  <text x="800" y="91" class="subtitol" text-anchor="middle">Observam la mateixa zona amb cada vegada més augment</text>
+
+  <!-- Fletxes entre els cinc nivells -->
+  <g fill="none" stroke="#287681" stroke-width="5" stroke-linecap="round" marker-end="url(#punta)">
+    <path d="M306 326 H337"/>
+    <path d="M621 326 H652"/>
+    <path d="M936 326 H967"/>
+    <path d="M1251 326 H1282"/>
+  </g>
+  <g fill="#ffffff" stroke="#287681" stroke-width="3">
+    <circle cx="321" cy="326" r="17"/><circle cx="636" cy="326" r="17"/>
+    <circle cx="951" cy="326" r="17"/><circle cx="1266" cy="326" r="17"/>
+  </g>
+  <g fill="none" stroke="#287681" stroke-width="3">
+    <circle cx="317" cy="322" r="6"/><path d="M321 327 l7 7"/>
+    <circle cx="632" cy="322" r="6"/><path d="M636 327 l7 7"/>
+    <circle cx="947" cy="322" r="6"/><path d="M951 327 l7 7"/>
+    <circle cx="1262" cy="322" r="6"/><path d="M1266 327 l7 7"/>
+  </g>
+
+  <!-- 1. Persona -->
+  <g id="persona" class="element" data-nivell="organisme" tabindex="0" aria-label="Persona, organisme">
+    <rect x="30" y="125" width="275" height="430" rx="28" class="targeta" filter="url(#ombra)"/>
+    <circle cx="68" cy="162" r="20" fill="#2f7f88"/><text x="68" y="163" class="numero">1</text>
+    <circle cx="168" cy="320" r="105" class="marc"/>
+    <g filter="url(#ombra-suau)">
+      <circle cx="168" cy="241" r="24" fill="url(#pell)" stroke="#845f58" stroke-width="2"/>
+      <path d="M138 280 Q168 263 198 280 L205 375 Q188 397 168 397 Q148 397 131 375 Z" fill="#477d99" stroke="#2f596d" stroke-width="3"/>
+      <path d="M140 286 Q112 311 106 357" fill="none" stroke="url(#pell)" stroke-width="20" stroke-linecap="round"/>
+      <path d="M196 286 Q222 305 231 350" fill="none" stroke="url(#pell)" stroke-width="20" stroke-linecap="round"/>
+      <path d="M153 391 L143 461" fill="none" stroke="#314c69" stroke-width="22" stroke-linecap="round"/>
+      <path d="M184 391 L194 461" fill="none" stroke="#314c69" stroke-width="22" stroke-linecap="round"/>
+      <path d="M222 303 Q234 322 237 345" fill="none" stroke="#d64f58" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="230" cy="323" r="20" fill="none" stroke="#d64f58" stroke-width="4" stroke-dasharray="5 5"/>
+    </g>
+    <text x="168" y="493" class="nom" text-anchor="middle">PERSONA</text>
+    <text x="168" y="520" class="nivell" text-anchor="middle">organisme</text>
+  </g>
+
+  <!-- 2. Braç -->
+  <g id="brac" class="element" data-nivell="regio-corporal" tabindex="0" aria-label="Braç, part del cos">
+    <rect x="345" y="125" width="275" height="430" rx="28" class="targeta" filter="url(#ombra)"/>
+    <circle cx="383" cy="162" r="20" fill="#2f7f88"/><text x="383" y="163" class="numero">2</text>
+    <circle cx="483" cy="320" r="105" class="marc"/>
+    <g filter="url(#ombra-suau)">
+      <path d="M405 275 Q422 241 454 251 Q496 263 548 300 Q563 311 555 331 Q546 348 526 341 Q483 321 447 317 Q424 314 405 297 Z" fill="url(#pell)" stroke="#8c5e55" stroke-width="3"/>
+      <path d="M438 263 Q469 261 526 302 Q539 311 530 328 Q487 309 447 304 Q427 301 417 289 Q422 274 438 263 Z" fill="url(#muscul)" stroke="#9d3348" stroke-width="3"/>
+      <path d="M449 273 Q475 276 516 307" fill="none" stroke="#f7a49a" stroke-width="3" opacity=".8"/>
+      <path d="M451 284 Q477 288 507 313" fill="none" stroke="#8e2f45" stroke-width="3" opacity=".55"/>
+      <path d="M405 297 Q426 326 466 360" fill="none" stroke="url(#pell)" stroke-width="35" stroke-linecap="round"/>
+      <path d="M463 358 Q478 371 492 382" fill="none" stroke="#d69170" stroke-width="24" stroke-linecap="round"/>
+      <circle cx="478" cy="292" r="49" fill="none" stroke="#287681" stroke-width="4" stroke-dasharray="8 7"/>
+    </g>
+    <text x="483" y="493" class="nom" text-anchor="middle">BRAÇ</text>
+    <text x="483" y="520" class="nivell" text-anchor="middle">part del cos</text>
+  </g>
+
+  <!-- 3. Múscul -->
+  <g id="nivell-muscul" class="element" data-nivell="organ" tabindex="0" aria-label="Múscul, òrgan">
+    <rect x="660" y="125" width="275" height="430" rx="28" class="targeta" filter="url(#ombra)"/>
+    <circle cx="698" cy="162" r="20" fill="#2f7f88"/><text x="698" y="163" class="numero">3</text>
+    <circle cx="798" cy="320" r="105" class="marc"/>
+    <g filter="url(#ombra-suau)">
+      <path d="M706 319 Q735 259 790 257 Q848 255 888 319 Q848 384 790 382 Q735 380 706 319 Z" fill="url(#muscul)" stroke="#8d2f44" stroke-width="4"/>
+      <path d="M688 319 Q700 302 718 294 L729 319 L718 345 Q700 337 688 319 Z" fill="#f3e7ce" stroke="#b99f77" stroke-width="3"/>
+      <path d="M907 319 Q895 301 879 294 L867 319 L879 345 Q895 337 907 319 Z" fill="#f3e7ce" stroke="#b99f77" stroke-width="3"/>
+      <g fill="none" stroke-linecap="round">
+        <path d="M724 319 Q757 276 870 307" stroke="#f7a09a" stroke-width="5"/>
+        <path d="M724 326 Q760 301 871 322" stroke="#862e46" stroke-width="4" opacity=".65"/>
+        <path d="M728 337 Q784 362 871 334" stroke="#f7a09a" stroke-width="4"/>
+        <path d="M739 294 Q792 271 854 297" stroke="#8b3046" stroke-width="3" opacity=".6"/>
+        <path d="M742 349 Q800 374 856 342" stroke="#8b3046" stroke-width="3" opacity=".6"/>
+      </g>
+      <circle cx="832" cy="315" r="47" fill="none" stroke="#287681" stroke-width="4" stroke-dasharray="8 7"/>
+    </g>
+    <text x="798" y="493" class="nom" text-anchor="middle">MÚSCUL</text>
+    <text x="798" y="520" class="nivell" text-anchor="middle">òrgan</text>
+  </g>
+
+  <!-- 4. Teixit muscular -->
+  <g id="teixit" class="element" data-nivell="teixit" tabindex="0" aria-label="Teixit muscular">
+    <rect x="975" y="125" width="275" height="430" rx="28" class="targeta" filter="url(#ombra)"/>
+    <circle cx="1013" cy="162" r="20" fill="#2f7f88"/><text x="1013" y="163" class="numero">4</text>
+    <circle cx="1115" cy="320" r="105" class="marc"/>
+    <g clip-path="url(#clip-teixit)">
+      <rect x="1005" y="210" width="220" height="220" fill="#fce8e1"/>
+      <g stroke="#8d3048" stroke-width="2">
+        <rect x="990" y="232" width="250" height="35" rx="17" fill="url(#fibra)"/>
+        <rect x="990" y="275" width="250" height="35" rx="17" fill="url(#fibra)"/>
+        <rect x="990" y="318" width="250" height="35" rx="17" fill="url(#fibra)"/>
+        <rect x="990" y="361" width="250" height="35" rx="17" fill="url(#fibra)"/>
+      </g>
+      <g opacity=".75">
+        <rect x="990" y="232" width="250" height="35" fill="url(#estries)"/>
+        <rect x="990" y="275" width="250" height="35" fill="url(#estries)"/>
+        <rect x="990" y="318" width="250" height="35" fill="url(#estries)"/>
+        <rect x="990" y="361" width="250" height="35" fill="url(#estries)"/>
+      </g>
+      <g fill="#62406f" stroke="#efe3f4" stroke-width="2">
+        <ellipse cx="1052" cy="249" rx="8" ry="5"/><ellipse cx="1167" cy="249" rx="8" ry="5"/>
+        <ellipse cx="1088" cy="292" rx="8" ry="5"/><ellipse cx="1201" cy="292" rx="8" ry="5"/>
+        <ellipse cx="1032" cy="335" rx="8" ry="5"/><ellipse cx="1144" cy="335" rx="8" ry="5"/>
+        <ellipse cx="1094" cy="378" rx="8" ry="5"/><ellipse cx="1192" cy="378" rx="8" ry="5"/>
+      </g>
+    </g>
+    <circle cx="1115" cy="320" r="105" fill="none" stroke="#b8d4d8" stroke-width="4"/>
+    <text x="1115" y="480" class="nom" text-anchor="middle">
+      <tspan x="1115">TEIXIT</tspan><tspan x="1115" dy="28">MUSCULAR</tspan>
+    </text>
+    <text x="1115" y="536" class="nivell" text-anchor="middle">teixit</text>
+  </g>
+
+  <!-- 5. Cèl·lula muscular -->
+  <g id="cellula" class="element" data-nivell="cellula" tabindex="0" aria-label="Cèl·lula muscular">
+    <rect x="1290" y="125" width="275" height="430" rx="28" class="targeta" filter="url(#ombra)"/>
+    <circle cx="1328" cy="162" r="20" fill="#2f7f88"/><text x="1328" y="163" class="numero">5</text>
+    <circle cx="1430" cy="320" r="105" class="marc"/>
+    <g clip-path="url(#clip-cellula)">
+      <rect x="1320" y="210" width="220" height="220" fill="#fff1ec"/>
+      <path d="M1300 320 C1337 276 1366 280 1400 290 C1438 301 1473 293 1560 316 C1481 347 1444 339 1400 349 C1361 357 1332 354 1300 320 Z" fill="url(#fibra)" stroke="#8d3048" stroke-width="4"/>
+      <path d="M1310 302 C1370 294 1430 313 1540 306" fill="none" stroke="#f5a09b" stroke-width="5" opacity=".7"/>
+      <path d="M1310 334 C1380 344 1442 319 1540 336" fill="none" stroke="#852f47" stroke-width="4" opacity=".65"/>
+      <g stroke="#fff1e8" stroke-width="4" opacity=".45">
+        <path d="M1341 286 v67"/><path d="M1364 285 v70"/><path d="M1387 288 v64"/>
+        <path d="M1410 293 v53"/><path d="M1433 296 v48"/><path d="M1456 296 v46"/>
+        <path d="M1479 295 v48"/><path d="M1502 300 v39"/>
+      </g>
+      <g fill="#5d3e71" stroke="#f2e5f5" stroke-width="2">
+        <ellipse cx="1360" cy="304" rx="10" ry="6"/><ellipse cx="1434" cy="331" rx="10" ry="6"/>
+        <ellipse cx="1500" cy="316" rx="10" ry="6"/>
+      </g>
+      <g fill="#efad45" stroke="#a55b31" stroke-width="2">
+        <ellipse cx="1398" cy="316" rx="7" ry="4"/><ellipse cx="1468" cy="314" rx="7" ry="4"/>
+      </g>
+    </g>
+    <circle cx="1430" cy="320" r="105" fill="none" stroke="#b8d4d8" stroke-width="4"/>
+    <text x="1430" y="480" class="nom" text-anchor="middle">
+      <tspan x="1430">CÈL·LULA</tspan><tspan x="1430" dy="28">MUSCULAR</tspan>
+    </text>
+    <text x="1430" y="536" class="nivell" text-anchor="middle">cèl·lula</text>
+  </g>
+
+  <!-- Escala conceptual -->
+  <path d="M120 612 H1480" fill="none" stroke="#287681" stroke-width="5" stroke-linecap="round" marker-end="url(#punta)"/>
+  <text x="120" y="652" class="zoom">MENYS AUGMENT</text>
+  <text x="1480" y="652" class="zoom" text-anchor="end">MÉS AUGMENT</text>
+  <g fill="#287681">
+    <circle cx="168" cy="612" r="7"/><circle cx="483" cy="612" r="8.5"/>
+    <circle cx="798" cy="612" r="10"/><circle cx="1115" cy="612" r="11.5"/>
+    <circle cx="1430" cy="612" r="13"/>
+  </g>
+</svg>
