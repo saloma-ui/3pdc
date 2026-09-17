@@ -121,6 +121,20 @@ html:has(.presentacio-vertical) {
   max-height: 60vh;
 }
 
+.presentacio-vertical .pv-figura-cellula {
+  width: min(90vw, 1040px);
+  margin: 0.5rem auto 0;
+}
+
+.presentacio-vertical .pv-figura-cellula img {
+  width: 100%;
+  max-height: 61vh;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 1rem;
+  background: #f5f1e8;
+  box-shadow: 0 0.7rem 1.8rem rgb(31 63 72 / 14%);
+}
+
 .presentacio-vertical .pv-figura-ampla {
   width: min(92vw, 1500px);
   margin: 0.5rem 50% 0;
@@ -291,6 +305,83 @@ html:has(.presentacio-vertical) {
   margin-bottom: 0.55rem;
   padding-left: 0.25rem;
   font-size: clamp(0.95rem, 1.2vw, 1.08rem);
+}
+
+.presentacio-vertical .pv-pasos-clau {
+  margin: 1.1rem 0;
+  padding-left: 2.25rem;
+  counter-reset: passos;
+}
+
+.presentacio-vertical .pv-pasos-clau li {
+  margin-bottom: 0.75rem;
+  padding: 0.55rem 0.8rem;
+  border-left: 0.22rem solid color-mix(in srgb, var(--md-primary-fg-color) 55%, transparent);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 5%, var(--md-default-bg-color));
+}
+
+.presentacio-vertical .pv-formula {
+  margin: 1.5rem auto;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.75rem;
+  background: var(--md-code-bg-color);
+  color: var(--md-primary-fg-color);
+  font-size: clamp(1.25rem, 2.5vw, 1.9rem);
+  font-weight: 800;
+  text-align: center;
+}
+
+.presentacio-vertical .pv-fitxa-dades {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(9rem, 0.65fr);
+  gap: 0.7rem 1rem;
+  margin: 1.25rem 0;
+  padding: 1.2rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.75rem;
+  background: var(--md-code-bg-color);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+}
+
+.presentacio-vertical .pv-fitxa-dades strong {
+  color: var(--md-primary-fg-color);
+}
+
+.presentacio-vertical .pv-llista-control {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.presentacio-vertical .pv-llista-control li {
+  padding: 0.8rem 1rem 0.8rem 2.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.6rem;
+  background: var(--md-default-bg-color);
+  position: relative;
+}
+
+.presentacio-vertical .pv-llista-control li::before {
+  position: absolute;
+  left: 0.9rem;
+  color: var(--md-primary-fg-color);
+  content: "✓";
+  font-weight: 800;
+}
+
+@media screen and (max-width: 760px) {
+  .presentacio-vertical .pv-graella-nivells,
+  .presentacio-vertical .pv-dues-columnes,
+  .presentacio-vertical .pv-llista-control {
+    grid-template-columns: 1fr;
+  }
+
+  .presentacio-vertical .pv-fitxa-dades {
+    grid-template-columns: 1fr;
+  }
 }
 
 .presentacio-vertical .pv-tancament {
