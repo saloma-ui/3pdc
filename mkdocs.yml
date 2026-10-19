@@ -1,8 +1,6 @@
 site_name: Àmbit científic i tecnològic · 3r PDC
 site_description: Activitats de l’Àmbit científic i tecnològic de 3r PDC
 site_url: https://saloma-ui.github.io/3pdc/
-repo_url: https://github.com/saloma-ui/3pdc
-repo_name: saloma-ui/3pdc
 
 theme:
   name: material
