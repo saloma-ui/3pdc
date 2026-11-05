@@ -46,7 +46,9 @@ nav:
           - A05 · Construïm una cèl·lula: activitats/up1/a05_up01/index.md
           - A06 · Explicam la nostra maqueta: activitats/up1/a06_up01/index.md
           - A07 · Què he après?: activitats/up1/a07_up01/index.md
-      - UP2: activitats/up2/index.md
+      - UP2:
+          - Índex: activitats/up2/index.md
+          - A01 · Què necessita una cèl·lula?: activitats/up2/a01_up02/index.md
       - UP3: activitats/up3/index.md
       - UP4: activitats/up4/index.md
       - UP5: activitats/up5/index.md
