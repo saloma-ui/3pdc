@@ -1,5 +1,5 @@
 ---
-title: "A02 · Qui li proporciona cada cosa?"
+title: "A02 · Com arriba tot al seu lloc?"
 hide:
   - toc
 ---
@@ -33,7 +33,7 @@ PRECISIÓ:
 
 <span class="pv-etapa">UP2 · Activitat 2</span>
 
-# Qui li proporciona cada cosa?
+# Com arriba tot al seu lloc?
 
 Com arriben els nutrients i l'oxigen a les nostres cèl·lules? Com en surten els residus?
 
